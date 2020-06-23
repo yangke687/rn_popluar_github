@@ -11,9 +11,11 @@ import { StyleSheet, View, Image, Navigator } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 // import TabNavigator from 'react-native-tab-navigator';
 // import BlankPage from './pages/Blank';
-import { AppStackNavigator } from './navigators';
+import { AppStackNavigator, AppTabNavigator } from './navigators';
 
-const App = createAppContainer(AppStackNavigator);
+// const App = createAppContainer(AppStackNavigator);
+
+const App = createAppContainer(AppTabNavigator);
 
 // class App extends React.Component {
 //   state = {

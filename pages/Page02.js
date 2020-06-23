@@ -15,6 +15,17 @@ class Page02 extends Component {
           onChangeText={(title) => setParams({ title, mode: 'edit' })}
           onEndEditing={() => setParams({ mode: 'end' })}
         />
+        <Button
+          title="Change Theme"
+          onPress={() =>
+            navigation.setParams({
+              theme: {
+                activeTintColor: 'orange',
+                updateTime: new Date().getTime(),
+              },
+            })
+          }
+        />
       </View>
     );
   }
