@@ -1,12 +1,15 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator, BottomTabBar } from 'react-navigation-tabs';
+import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { Button, Platform } from 'react-native';
+import { Button, Platform, ScrollView, SafeAreaView } from 'react-native';
 import HomePage from '../pages/Home';
 import Page01 from '../pages/Page01';
 import Page02 from '../pages/Page02';
+import Page04 from '../pages/Page04';
+import Page05 from '../pages/Page05';
 
 export const AppStackNavigator = createStackNavigator(
   {
@@ -42,15 +45,47 @@ export const AppStackNavigator = createStackNavigator(
         };
       },
     },
-    Nav: {
-      screen: () => null,
-    },
   }
   // {
   //   defaultNavigationOptions: {
   //     header: null,
   //   },
   // }
+);
+
+export const AppDrawerNavigator = createDrawerNavigator(
+  {
+    Page4: {
+      screen: Page04,
+      navigationOptions: {
+        drawerLabel: 'Page 04',
+        drawerIcon: ({ tintColor }) => (
+          <Icons name="android" size={24} style={{ color: tintColor }} />
+        ),
+      },
+    },
+    Page5: {
+      screen: Page05,
+      navigationOptions: {
+        drawerLabel: 'Page 05',
+        drawerIcon: ({ tintColor }) => (
+          <Icons name="android" size={24} style={{ color: tintColor }} />
+        ),
+      },
+    },
+  },
+  {
+    contentOptions: {
+      activeTintColor: 'darkblue',
+    },
+    contentComponent: (props) => (
+      <ScrollView style={{ backgroundColor: 'lightgreen' }}>
+        <SafeAreaView>
+          <DrawerItems {...props} />
+        </SafeAreaView>
+      </ScrollView>
+    ),
+  }
 );
 
 class TabBarComponent extends React.Component {

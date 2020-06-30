@@ -21,7 +21,6 @@ class Home extends Component {
           title="Go to Page02"
           onPress={() => navigation.navigate('Page02', { title: 'PAGE 02' })}
         />
-        <Button title="Go to Nav" onPress={() => navigation.navigate('Nav')} />
       </View>
     );
   }
