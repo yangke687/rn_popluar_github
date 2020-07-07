@@ -10,11 +10,15 @@ import Page01 from '../pages/Page01';
 import Page02 from '../pages/Page02';
 import Page04 from '../pages/Page04';
 import Page05 from '../pages/Page05';
+import FlatListDemo from '../pages/FlatListDemo';
 
 export const AppStackNavigator = createStackNavigator(
   {
     Home: {
       screen: HomePage,
+    },
+    FlatList: {
+      screen: FlatListDemo,
     },
     Page01: {
       screen: Page01,

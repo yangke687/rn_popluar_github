@@ -19,7 +19,7 @@ import {
 
 // const App = createAppContainer(AppStackNavigator);
 
-const App = createAppContainer(AppDrawerNavigator);
+const App = createAppContainer(AppStackNavigator);
 
 // class App extends React.Component {
 //   state = {

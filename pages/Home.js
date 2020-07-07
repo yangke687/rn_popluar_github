@@ -21,6 +21,12 @@ class Home extends Component {
           title="Go to Page02"
           onPress={() => navigation.navigate('Page02', { title: 'PAGE 02' })}
         />
+        <Button
+          title="Go to Flat List"
+          onPress={() =>
+            navigation.navigate('FlatList', { title: 'Flat List' })
+          }
+        />
       </View>
     );
   }
