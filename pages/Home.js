@@ -27,6 +27,12 @@ class Home extends Component {
             navigation.navigate('FlatList', { title: 'Flat List' })
           }
         />
+        <Button
+          title="Go to Section List"
+          onPress={() =>
+            navigation.navigate('SectionList', { title: 'Section List' })
+          }
+        />
       </View>
     );
   }

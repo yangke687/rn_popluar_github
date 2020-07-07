@@ -11,6 +11,7 @@ import Page02 from '../pages/Page02';
 import Page04 from '../pages/Page04';
 import Page05 from '../pages/Page05';
 import FlatListDemo from '../pages/FlatListDemo';
+import SectionListDemo from '../pages/SectionListDemo';
 
 export const AppStackNavigator = createStackNavigator(
   {
@@ -19,6 +20,9 @@ export const AppStackNavigator = createStackNavigator(
     },
     FlatList: {
       screen: FlatListDemo,
+    },
+    SectionList: {
+      screen: SectionListDemo,
     },
     Page01: {
       screen: Page01,
